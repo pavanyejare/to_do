@@ -20,7 +20,6 @@ def add():
 	else:
 		task = sys.argv[2]
 		if os.path.isfile("./task.txt"):
-<<<<<<< HEAD
 			f1=open("./task.txt","r")
 			last_line = f1.read().splitlines()
 			last_num = last_line[-1].split()
@@ -28,19 +27,13 @@ def add():
 			f1.close() 
 			f=open("./task.txt","a")
 			f.write(str(new_num) + "\t"+ task + "\n")
-=======
 			f=open("./task.txt","a")
 			f.write(task + "\n")
->>>>>>> 8277757cc76c113e02589c4211fd2c28445456d3
 			f.close()
 			print ("Task added")
 		else:
 			f=open("./task.txt","w")
-<<<<<<< HEAD
 			f.write("1\t" + task + "\n")
-=======
-			f.write(task + "\n")
->>>>>>> 8277757cc76c113e02589c4211fd2c28445456d3
 			f.close()
 			print ("Task added")
 ############ Display Function #############
@@ -51,17 +44,13 @@ def display():
 		f.close()
 	else:
 		print ("File not exist \t Please add task first")
-<<<<<<< HEAD
 		print ("\nTry \'python3 todo.py --help\' for more information.")
-=======
->>>>>>> 8277757cc76c113e02589c4211fd2c28445456d3
 
 ###### Main Function #########
 def main():
 	if len(sys.argv) <= 1 :
 		man()
 	elif len(sys.argv) >= 1 :
-<<<<<<< HEAD
             if (sys.argv[1]=="-a"):
                 add()
             elif (sys.argv[1]=="-v"):
@@ -75,12 +64,3 @@ def main():
 
 
 main()
-
-=======
-		if (sys.argv[1]=="-a"):
-			add()
-		elif (sys.argv[1]=="-v"):
-			display()
-
-main()
->>>>>>> 8277757cc76c113e02589c4211fd2c28445456d3
